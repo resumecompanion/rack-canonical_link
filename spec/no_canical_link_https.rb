@@ -12,7 +12,7 @@ module Rack
     end
 
     it 'should inject canonical tag of http HTML request' do
-      get('/').body.should == '<html><head>Hello world<link href="http://example.org/" rel="canonical" /></head><body></body></html>'
+      get('/').body.should == '<html><head>Hello world<link href="http://example.org" rel="canonical" /></head><body></body></html>'
     end
 
     it 'should not inject canonical tag into non HTML requests for HTTP' do
